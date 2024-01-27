@@ -27,6 +27,7 @@ def main():
     home_dir = curr_dir.parent.parent.parent
     params_file = home_dir.as_posix() + '/params.yaml'
     params = yaml.safe_load(open(params_file))["make_dataset"]
+    data_path = home_dir.as_posix() + '/data/raw/creditcard.csv'
 
     input_file = sys.argv[1]
     data_path = home_dir.as_posix() + input_file
